@@ -1,0 +1,266 @@
+html
+{ 
+    font-size: 62.5%; /* 10px = 1rem  */
+    box-sizing: border-box; 
+}
+
+*, *:before, *:after
+{ 
+    box-sizing: inherit;
+}
+
+body
+{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: #0F0F0F;
+}
+
+h1,
+h2,
+h3
+{
+    font-weight: 700;
+}
+
+.newsletter
+{
+    position: relative;
+    background-color: #232A38;
+    width: 30rem;
+    height: 40rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    z-index: 0;
+
+    transition: all .5s ease-in-out;
+}
+
+.newsletter:hover
+{
+    cursor: pointer;
+}
+
+.circulos::before
+{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #3B2BB6;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    clip-path: circle(15rem at 90% 10%);
+
+    animation: movercirculo1 60s infinite;
+}
+
+@keyframes movercirculo1 {
+    0%
+    {
+        clip-path: circle(15rem at 90% 10%);
+    }
+
+    50%
+    {
+        clip-path: circle(15rem at 90% 90%);
+    }
+
+    100%
+    {
+        clip-path: circle(15rem at 90% 10%);
+    }
+}
+
+.circulos::after
+{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #3859EB;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    clip-path: circle(15rem at 5% 90%);
+
+    animation: movercirculo2 60s infinite;
+}
+
+@keyframes movercirculo2 {
+    0%
+    {
+        clip-path: circle(15rem at 5% 90%);
+    }
+
+    50%
+    {
+        clip-path: circle(15rem at 5% 10%);
+    }
+
+    100%
+    {
+        clip-path: circle(15rem at 5% 90%);
+    }
+}
+
+.newsletter h2
+{
+    text-align: center;
+    font-size: 4rem;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.separador
+{
+    background: linear-gradient(to right, #3859EB 0%, #3B2BB6 100% );
+    width: 60%;
+    height: .4rem;
+    border-radius: 4rem;
+    margin-top: 2rem;
+}
+
+.newsletter p
+{
+    margin-top: 5rem;
+    background-color: #3859EB;
+    color: #FFF;
+    font-size: 2.2rem;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+
+    transition: all .5s ease-in-out;
+}
+
+.newsletter p:hover
+{
+    background-color: #3B2BB6;
+    cursor: pointer;
+}
+
+
+.newsletterform
+{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    height: 40rem;
+    width: 0;
+    background: #232A38;
+    border-radius: 2rem;
+
+    transition: all 1s ease-in-out;
+}
+
+.cerrar
+{
+    width: 3rem;
+    height: 3rem;
+    background-color: #3859EB;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    color: #FFF;
+    margin: 0;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.cerrar:hover
+{
+    cursor: pointer;
+}
+
+.content
+{
+    padding: 3rem;
+    opacity: 0;
+
+    transition: all .4s ease-in-out;
+}
+
+.newsletterform h2 
+{
+    text-align: center;
+    font-size: 3rem;
+    color: #FFF;
+}
+
+.newsletterform p
+{
+    text-align: center;
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.formulario
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.campo
+{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.campo .label
+{
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.campo input
+{
+    width: 40rem;
+    padding: 1rem 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 4px solid #3B2BB6;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #3859EB;
+}
+
+.formulario .submit
+{
+    margin-top: 5rem;
+    padding: 1rem 5rem;
+    background-color: #3859EB;
+    border: none;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: #FFF;
+    font-weight: 700;
+}
+
+.formulario .submit:hover
+{
+    cursor: pointer;
+}
+
